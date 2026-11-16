@@ -204,3 +204,7 @@
 @media(max-width:950px){.finish-layout .completion-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.finish-layout .completion-actions,.finish-layout .completion-actions:has(>:nth-child(2):last-child){grid-template-columns:minmax(0,1fr)}}
 @media print{.completion-actions{display:none!important}}
+
+/* Save progress belongs after the learning content, before the site footer. */
+@media screen{.main-stage{margin-bottom:24px}.save-shell{margin-top:0;margin-bottom:32px}}
+@media screen and (max-width:520px){.main-stage{margin-bottom:16px}.save-shell{margin-bottom:24px}}
