@@ -195,3 +195,12 @@
 @media(max-width:950px){.context-workspace,.quality-layout,.rehearsal-layout{grid-template-columns:minmax(0,1fr);gap:20px}}
 @media(max-width:520px){.scene-card{--panel-gap:16px;--panel-radius:12px;--dialogue-avatar:44px;--dialogue-padding:12px}.context-workspace,.quality-layout,.rehearsal-layout{margin:16px 0;gap:16px}.speaker.speaker-illustrated,.quality-layout .speaker.speaker-illustrated{gap:8px}.scene-card .option{min-height:48px}.scene-card .btn-row.split>:last-child{margin-left:0}.scene-card .btn-row.split .btn{width:100%}.speaker p,.speaker-words{font-size:.95rem}.finish-layout .hero-copy h1{font-size:clamp(1.9rem,8vw,2.4rem)}}
 @media(max-width:360px){.scene-card{--dialogue-avatar:36px;--dialogue-padding:10px}}
+
+/* Completion: one aligned action group, independent of the hero text column. */
+.finish-layout .completion-actions{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch;width:100%}
+.finish-layout .completion-actions .btn{width:100%;min-width:0;min-height:52px;white-space:normal;justify-content:center;text-align:center;margin:0;overflow-wrap:break-word}
+.finish-layout .completion-artwork{min-width:0}
+.finish-layout .completion-actions:has(>:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:950px){.finish-layout .completion-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.finish-layout .completion-actions,.finish-layout .completion-actions:has(>:nth-child(2):last-child){grid-template-columns:minmax(0,1fr)}}
+@media print{.completion-actions{display:none!important}}
