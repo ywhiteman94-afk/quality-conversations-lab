@@ -172,3 +172,26 @@
 .speaker-words{display:block;color:#292721;line-height:1.65}
 .transcript-disclosure summary{min-height:44px;cursor:pointer}
 @media(forced-colors:active){.btn,.option,.quality-option,.evidence-choice,.reflection-area{border:2px solid ButtonText}.option:has(input:checked),.quality-option:has(input:checked),.evidence-choice:has(input:checked){outline:2px solid Highlight}.progress-track{border:1px solid CanvasText}.progress-fill{background:Highlight;forced-color-adjust:none}:focus-visible{outline:3px solid Highlight!important}}
+
+/* V3 — unified course layout: context, dialogue, choices, navigation. */
+.scene-card{--panel-gap:24px;--panel-radius:14px;--dialogue-avatar:52px;--dialogue-padding:16px}
+.context-workspace,.quality-layout,.rehearsal-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--panel-gap);align-items:start;margin:20px 0}
+.context-workspace>section,.quality-layout>section,.rehearsal-layout>section{min-width:0}
+.scene-card .section-heading{margin:0 0 12px;text-align:left;line-height:1.25}
+.scene-card .section-heading+figure{margin-top:0}
+.context-workspace .quality-summary,.context-workspace .question-card{margin:0}
+.context-workspace .wide-photo{max-height:none;aspect-ratio:16/9;object-fit:contain}
+.speaker-lines,.quality-layout .speaker-lines{gap:12px;margin:12px 0}
+.speaker.speaker-illustrated,.quality-layout .speaker.speaker-illustrated{padding:var(--dialogue-padding);gap:12px;align-items:flex-start;border-radius:var(--panel-radius)}
+.speaker-illustrated .assessment-avatar,.quality-layout .speaker-illustrated .assessment-avatar,.assessment-speaker-quote .assessment-avatar{width:var(--dialogue-avatar);height:var(--dialogue-avatar)}
+.speaker-content{min-width:0;overflow-wrap:break-word}.speaker .who{line-height:1.4;margin-bottom:6px}.speaker p,.speaker-words{font-size:1rem;line-height:1.6}
+.evidence-choice input{margin-top:3px;width:20px;height:20px;flex:none}
+.evidence-field legend, .context-workspace legend,.rehearsal-layout legend{padding:0 0 12px;font-size:1.05rem;line-height:1.45}
+.quality-layout .evidence-field{margin:0}.scene-card .question-card,.scene-card .prep-section,.scene-card .quality-summary,.scene-card .plan-field,.scene-card .plan-print,.scene-card .reaction-panel,.scene-card .rehearsal-model,.scene-card .feedback,.scene-card .transcript-disclosure{border-radius:var(--panel-radius)}
+.scene-card .option,.scene-card .quality-option,.scene-card .evidence-choice{border-radius:12px}.scene-card .option{min-height:56px}
+.scene-card .btn-row.split>:last-child{margin-left:auto}.scene-card .btn-row.split{align-items:center;gap:12px}
+.scene-card .assessment-progress{margin-bottom:16px}.scene-card .assessment-cast{margin:16px 0 20px}.assessment-workspace .question-card p:last-child{margin-bottom:0}
+.finish-layout .hero-copy h1{font-size:clamp(2.1rem,4.2vw,4rem);line-height:1.1}.finish-layout .assessment-badges{justify-content:flex-start;gap:8px}.finish-layout .completion-image{border-radius:16px}
+@media(max-width:950px){.context-workspace,.quality-layout,.rehearsal-layout{grid-template-columns:minmax(0,1fr);gap:20px}}
+@media(max-width:520px){.scene-card{--panel-gap:16px;--panel-radius:12px;--dialogue-avatar:44px;--dialogue-padding:12px}.context-workspace,.quality-layout,.rehearsal-layout{margin:16px 0;gap:16px}.speaker.speaker-illustrated,.quality-layout .speaker.speaker-illustrated{gap:8px}.scene-card .option{min-height:48px}.scene-card .btn-row.split>:last-child{margin-left:0}.scene-card .btn-row.split .btn{width:100%}.speaker p,.speaker-words{font-size:.95rem}.finish-layout .hero-copy h1{font-size:clamp(1.9rem,8vw,2.4rem)}}
+@media(max-width:360px){.scene-card{--dialogue-avatar:36px;--dialogue-padding:10px}}
