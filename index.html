@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=completion-20261116">
+  <link rel="stylesheet" href="styles.css?v=save-bottom-20261116">
   <script src="content.js" defer></script>
   <script src="app.js?v=completion-20261116" defer></script>
 </head>
@@ -28,13 +28,13 @@
     <ol id="stage-indicator" class="stage-indicator" aria-label="Learning stages"></ol><div class="progress-info"><span id="chapter-name">INTRODUCTION</span><span id="progress-text">Step 1 of 15</span></div>
     <div id="course-progress" class="progress-track" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-bar" class="progress-fill"></div></div>
   </div>
+  <main id="stage" tabindex="-1" class="main-stage"></main>
   <section class="save-shell" aria-label="Local progress settings">
     <div class="save-controls"><label class="save-toggle" id="save-toggle-label"><input type="checkbox" id="save-progress" aria-describedby="save-help"> Save progress on this browser</label><button type="button" class="text-button" id="clear-progress" hidden>Clear saved progress</button></div>
     <p id="save-help">Optional. Saves selections and your location on this device only; not practice notes. Use a private device.</p>
     <p id="save-status" role="status" aria-live="polite">Saving is off.</p>
     <div id="saved-session" hidden><p id="saved-location"></p><div class="save-actions"><button type="button" class="btn" id="resume-course">Resume saved session</button><button type="button" class="btn btn-secondary" id="start-fresh">Start new session</button></div></div>
   </section>
-  <main id="stage" tabindex="-1" class="main-stage"></main>
   <footer class="site-footer"><span>QUALITY & CONVERSATIONS LAB</span><span>Observe · Coach · Reflect · Apply</span></footer>
   <div id="screen-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
